@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-simple-snackbar {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  line-height: 20px;
+  /* opacity: 1; */
+}
+
+/* Structure */
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.example-chip-list {
+  width: 100%;
+}
+
+.ant-switch-checked {
+  background-color: #41a23e;
+}
+.ant-switch-loading,
+.ant-switch-disabled {
+  opacity: 0.66;
+}
+nz-switch {
+  width: 90px;
+}
+
+.anticon,
+.anticon svg {
+  display: inline-flex;
+}
+
+a {
+  color: orangered;
+}
