@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class CountryUtilityService implements CountryUtilityInterface {
 
-	public void setCountyNameAndCodeAndNumber(List<CustomerDto> customerDtos) {
+	public void setCountyNameAndCode(List<CustomerDto> customerDtos) {
 
 		for (CustomerDto cust : customerDtos) {
 			String fullNumber = cust.getPhone();

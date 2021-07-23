@@ -21,6 +21,13 @@ public class Customer {
 	public Customer() {
 	}
 
+	public Customer(int id, String name, String phone) {
+		this.id = id;
+		this.name = name;
+		this.phone = phone;
+	}
+
+	
 	public int getId() {
 		return id;
 	}
@@ -47,6 +54,6 @@ public class Customer {
 	
 	@Override
 	public String toString() {
-		return "Student{" + "id=" + id + ", name='" + name + '\'' + ", phone='" + phone + '\'' + '}';
+		return "Customer{" + "id=" + id + ", name='" + name + '\'' + ", phone='" + phone + '\'' + '}';
 	}
 }

@@ -3,7 +3,6 @@ package com.jumia.services.exercise.service;
 import com.jumia.services.exercise.dto.CustomerDto;
 import com.jumia.services.exercise.dto.adapter.CustomerAdapter;
 import com.jumia.services.exercise.entity.Customer;
-import com.jumia.services.exercise.utils.Country;
 import com.jumia.services.exercise.repository.CustomerRepository;
 import com.jumia.services.exercise.service.interfaces.CustomerServicesInterface;
 import com.jumia.services.exercise.utils.CountryUtilityService;
@@ -37,7 +36,7 @@ public class CustomerServices implements CustomerServicesInterface {
 
 		if (!customers.isEmpty()) {
 			customerDtos = customerAdapter.toDTO(customers);
-			countryUtils.setCountyNameAndCodeAndNumber(customerDtos);
+			countryUtils.setCountyNameAndCode(customerDtos);
 			countryUtils.validatePhoneNumber(customerDtos);
 		}
 

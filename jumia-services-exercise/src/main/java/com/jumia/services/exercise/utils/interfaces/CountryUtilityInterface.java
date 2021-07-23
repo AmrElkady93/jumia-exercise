@@ -14,7 +14,7 @@ import java.util.List;
  */
 public interface CountryUtilityInterface {
 	
-	void setCountyNameAndCodeAndNumber(List<CustomerDto> customerDtos);
+	void setCountyNameAndCode(List<CustomerDto> customerDtos);
 	
 	void validatePhoneNumber(List<CustomerDto> customerDtos);
 }
