@@ -68,7 +68,7 @@ public class CustomerDto {
 		this.number = number;
 	}
 
-	public boolean isState() {
+	public boolean getState() {
 		return state;
 	}
 
