@@ -31,8 +31,7 @@ class CustomerControllerTest {
 	@Mock
 	CustomerServicesInterface customerServicesInterface;
 
-	@InjectMocks
-	CustomerAdapter customerAdapter;
+	CustomerAdapter customerAdapter=new CustomerAdapter();
 
 
 	@Test

@@ -23,6 +23,8 @@ class CountryUtilityServiceTest {
 	@InjectMocks
 	CountryUtilityService CountryUtilityService;
 
+	CustomerAdapter customerAdapter=new CustomerAdapter();
+
 	static List<Customer> customers;
 
 	@BeforeAll
@@ -36,14 +38,13 @@ class CountryUtilityServiceTest {
 		customers.add(customer_2);
 		customers.add(customer_3);
 
-
 	}
 
 	@Test
 	void setCountyNameAndCode(){
 
 		//given
-		List<CustomerDto> customerDtos =new CustomerAdapter().toDTO(customers);
+		List<CustomerDto> customerDtos =customerAdapter.toDTO(customers);
 
 		//when
 		CountryUtilityService.setCountyNameAndCode(customerDtos);
@@ -64,7 +65,7 @@ class CountryUtilityServiceTest {
 	void validatePhoneNumber(){
 
 		//given
-		List<CustomerDto> customerDtos =new CustomerAdapter().toDTO(customers);
+		List<CustomerDto> customerDtos =customerAdapter.toDTO(customers);
 
 		//when
 		CountryUtilityService.validatePhoneNumber(customerDtos);
