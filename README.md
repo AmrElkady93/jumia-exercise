@@ -7,7 +7,7 @@
   - > run `mvn clean package` from linux
   - > run `java -jar target/jumia-services-exercise-1.0.0.jar`
   - > server started at this [url](http://localhost:8080/)
-  - > to get all phones [url](http://localhost:8080/customers)
+  - > to get all customer [url](http://localhost:8080/customers)
 
 ## Run UI project
 
