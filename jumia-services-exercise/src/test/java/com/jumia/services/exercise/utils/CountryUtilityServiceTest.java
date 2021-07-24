@@ -31,8 +31,10 @@ class CountryUtilityServiceTest {
 		customers = new ArrayList<>();
 		Customer customer_1 = new Customer(1, "Amr", "(212) 6007989253");
 		Customer customer_2 = new Customer(2, "Oliver", "(258) 847651504");
+		Customer customer_3 = new Customer(2, "Tito", "(555) 543651509");
 		customers.add(customer_1);
 		customers.add(customer_2);
+		customers.add(customer_3);
 
 
 	}
@@ -53,6 +55,9 @@ class CountryUtilityServiceTest {
 		assertEquals(customerDtos.get(1).getCountry(),Country.MOZAMBIQUE.getName());
 		assertEquals(customerDtos.get(1).getCountryCode(),"+"+Country.MOZAMBIQUE.getCode().substring(1, Country.MOZAMBIQUE.getCode().length() - 1));
 
+		assertEquals(customerDtos.get(2).getCountry(),"Unknown");
+		assertEquals(customerDtos.get(2).getCountryCode(),"Unknown");
+
 	}
 
 	@Test
@@ -67,6 +72,8 @@ class CountryUtilityServiceTest {
 		//then
 		assertFalse(customerDtos.get(0).getState());
 		assertTrue(customerDtos.get(1).getState());
+		assertFalse(customerDtos.get(2).getState());
+
 
 	}
 }
